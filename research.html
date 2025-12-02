@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | City Institute of Higher Learning | Institut Supérieur de la Ville</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" id="langEn">EN</button>
+        <button class="lang-btn" id="langFr">FR</button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px;">
+                    <div class="logo-icon">C</div>
+                    <div class="logo-text">CityIHL</div>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" data-en="Home" data-fr="Accueil">Home</a></li>
+                <li><a href="about.html" data-en="About" data-fr="À propos">About</a></li>
+                <li><a href="programs.html" data-en="Programs" data-fr="Programmes">Programs</a></li>
+                <li><a href="research.html" class="active" data-en="Research" data-fr="Recherche">Research</a></li>
+                <li><a href="events.html" data-en="Events" data-fr="Événements">Events</a></li>
+                <li><a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+                <li><button class="apply-btn" data-en="Apply Now" data-fr="Postuler">Apply Now</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Research Hero -->
+    <section class="research-hero">
+        <div class="container">
+            <h1 data-en="Research at C-IHL" data-fr="La recherche à C-IHL">Research at C-IHL</h1>
+            <p class="lang-content active">
+                At City Institute of Higher Learning (C-IHL), we are dedicated to advancing knowledge through rigorous and innovative research. Our research endeavors span across business, socioeconomic, and academic disciplines, underpinned by the exceptional talents of our world-class faculty and consultants.
+            </p>
+            <p class="lang-content">
+                À City Institute of Higher Learning (C-IHL), nous nous consacrons à l'avancement des connaissances grâce à des recherches rigoureuses et innovantes. Nos efforts de recherche couvrent les domaines commerciaux, socioéconomiques et universitaires, soutenus par les talents exceptionnels de nos professeurs et consultants de classe mondiale.
+            </p>
+        </div>
+    </section>
+
+    <!-- Research Tabs Navigation -->
+    <div class="research-tabs">
+        <div class="container">
+            <div class="tabs-container">
+                <button class="research-tab active" data-tab="research-areas">
+                    <i class="fas fa-flask"></i>
+                    <span data-en="Research Areas" data-fr="Domaines de Recherche">Research Areas</span>
+                </button>
+                <button class="research-tab" data-tab="publications">
+                    <i class="fas fa-book"></i>
+                    <span data-en="Publications" data-fr="Publications">Publications</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Research Content Sections -->
+    <div class="container">
+        <!-- Research Areas Section -->
+        <section class="research-section active" id="research-areas">
+            <div class="section-header">
+                <h2 data-en="Our Research Focus" data-fr="Notre Focus de Recherche">Our Research Focus</h2>
+                <p class="lang-content active">We are committed to contributing valuable insights that not only enhance academic understanding but also drive real-world applications and solutions.</p>
+                <p class="lang-content">Nous nous engageons à apporter des informations précieuses qui non seulement améliorent la compréhension académique, mais favorisent également des applications et des solutions concrètes.</p>
+            </div>
+
+            <div class="research-areas">
+                <div class="areas-grid">
+                    <!-- Business Research -->
+                    <div class="area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="area-content">
+                            <h3 data-en="Business Research" data-fr="Recherche Commerciale">Business Research</h3>
+                            <p class="lang-content active">
+                                Driving Industry Innovation. Our business research initiatives focus on cutting-edge studies that address critical challenges and opportunities in the corporate world. From market analysis to organizational behavior and strategic management, our research provides actionable insights that help businesses thrive in an ever-evolving landscape.
+                            </p>
+                            <p class="lang-content">
+                                Stimuler l'innovation industrielle. Nos initiatives de recherche commerciale se concentrent sur des études de pointe qui abordent les défis et les opportunités critiques du monde des affaires. De l'analyse de marché au comportement organisationnel et à la gestion stratégique, nos recherches fournissent des informations exploitables qui aident les entreprises à prospérer dans un environnement en constante évolution.
+                            </p>
+                            <div style="margin-top: 25px;">
+                                <a href="city-research.html" class="btn-primary" data-en="Learn More" data-fr="En Savoir Plus">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Socioeconomic Research -->
+                    <div class="area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <div class="area-content">
+                            <h3 data-en="Socioeconomic Research" data-fr="Recherche Socio-économique">Socioeconomic Research</h3>
+                            <p class="lang-content active">
+                                Understanding Societal Dynamics. C-IHL's socioeconomic research aims to dissect and understand the complex interplay between economic forces and social structures. Our work in this area explores themes such as poverty, inequality, economic development, and public policy, providing a foundation for informed decision-making and policy formulation.
+                            </p>
+                            <p class="lang-content">
+                                Comprendre la dynamique sociétale. Les recherches socioéconomiques de C-IHL visent à décortiquer et à comprendre l'interaction complexe entre les forces économiques et les structures sociales. Nos travaux dans ce domaine explorent des thèmes tels que la pauvreté, les inégalités, le développement économique et les politiques publiques, offrant ainsi une base pour une prise de décision et une formulation de politiques éclairées.
+                            </p>
+                            <div style="margin-top: 25px;">
+                                <a href="city-research.html#socioeconomic" class="btn-primary" data-en="Learn More" data-fr="En Savoir Plus">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Research -->
+                    <div class="area-card">
+                        <div class="area-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="area-content">
+                            <h3 data-en="Academic Research" data-fr="Recherche Académique">Academic Research</h3>
+                            <p class="lang-content active">
+                                Scholarly Excellence. At the core of our academic mission is a strong commitment to scholarly research. Our faculty and researchers contribute to the academic community through published papers, articles, and books across a wide range of disciplines. Our research is not only recognized for its academic rigor but also for its contribution to teaching and learning practices globally.
+                            </p>
+                            <p class="lang-content">
+                                Excellence académique. Au cœur de notre mission académique se trouve un engagement fort envers la recherche scientifique. Nos professeurs et chercheurs contribuent à la communauté universitaire par le biais de publications, d'articles et de livres dans un large éventail de disciplines. Nos recherches sont reconnues non seulement pour leur rigueur académique, mais aussi pour leur contribution aux pratiques d'enseignement et d'apprentissage à l'échelle mondiale.
+                            </p>
+                            <div style="margin-top: 25px;">
+                                <a href="publications.html" class="btn-primary" data-en="View Publications" data-fr="Voir les Publications">View Publications</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Collaboration Section -->
+            <div class="collaboration-section">
+                <div class="collaboration-content">
+                    <h2 data-en="Research Collaboration and Partnerships" data-fr="Collaboration et Partenariats de Recherche">Research Collaboration and Partnerships</h2>
+                    <p class="lang-content active">
+                        C-IHL actively seeks to expand its research impact through collaborations and partnerships with other academic institutions, industry leaders, and research organizations. We welcome opportunities to co-create knowledge that can transform industries and enrich communities.
+                    </p>
+                    <p class="lang-content">
+                        C-IHL cherche activement à étendre l'impact de ses recherches par le biais de collaborations et de partenariats avec d'autres institutions universitaires, des leaders de l'industrie et des organismes de recherche. Nous sommes ouverts aux opportunités de co-créer des connaissances qui peuvent transformer les industries et enrichir les communautés.
+                    </p>
+                    <div style="margin-top: 40px;">
+                        <a href="contact.html" class="btn-secondary" data-en="Discuss Collaboration" data-fr="Discuter d'une Collaboration">Discuss Collaboration</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Contact -->
+            <div class="research-contact">
+                <h3 data-en="Get Involved in Our Research" data-fr="Participez à Notre Recherche">Get Involved in Our Research</h3>
+                <p class="lang-content active">
+                    At C-IHL, research is a cornerstone of our academic philosophy. We foster a research environment that encourages curiosity, critical thinking, and innovation. Our researchers are supported with state-of-the-art facilities and resources to conduct their studies effectively.
+                </p>
+                <p class="lang-content">
+                    À C-IHL, la recherche est la pierre angulaire de notre philosophie académique. Nous favorisons un environnement de recherche qui encourage la curiosité, la pensée critique et l'innovation. Nos chercheurs bénéficient d'installations et de ressources de pointe pour mener leurs études efficacement.
+                </p>
+                
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <strong data-en="Email" data-fr="Courriel">Email</strong>
+                            <p>admin@city-ihl.ca</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <strong data-en="Phone" data-fr="Téléphone">Phone</strong>
+                            <p>+1 506 388 2833</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section class="research-section" id="publications">
+            <div class="section-header">
+                <h2 data-en="Publications" data-fr="Publications">Publications</h2>
+                <p class="lang-content active">At City Institute of Higher Learning (C-IHL), our faculty and visiting professors are not only dedicated educators but also prolific researchers whose scholarly contributions significantly enhance our academic prestige.</p>
+                <p class="lang-content">À City Institute of Higher Learning (C-IHL), nos professeurs et professeurs invités sont non seulement des éducateurs dévoués, mais aussi des chercheurs prolifiques dont les contributions scientifiques améliorent considérablement notre prestige académique.</p>
+            </div>
+
+            <!-- Faculty Publications Table -->
+            <div class="publications-section">
+                <div class="faculty-table-container">
+                    <div class="table-header">
+                        <h3 data-en="Publications of Faculty and Visiting Professors" data-fr="Publications des Professeurs et des Professeurs Invités">Publications of Faculty and Visiting Professors</h3>
+                    </div>
+                    
+                    <table class="faculty-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th data-en="Our Faculty and Visiting Professors" data-fr="Nos Professeurs et Professeurs Invités">Our Faculty and Visiting Professors</th>
+                                <th data-en="Research Profile" data-fr="Profil de Recherche">Research Profile</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>
+                                    <strong data-en="Professor Dieu Hack-Polay" data-fr="Professeur Dieu Hack-Polay">Professor Dieu Hack-Polay</strong>
+                                    <span class="badge" data-en="Director of Research" data-fr="Directeur de la Recherche">Director of Research</span>
+                                </td>
+                                <td>
+                                    <a href="https://scholar.google.com/citations?hl=en&user=5Tq-FW8AAAAJ" target="_blank" class="faculty-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span data-en="View Google Scholar Profile" data-fr="Voir le Profil Google Scholar">View Google Scholar Profile</span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>
+                                    <strong data-en="Professor Mahfuzur Rahman" data-fr="Professeur Mahfuzur Rahman">Professor Mahfuzur Rahman</strong>
+                                    <span class="badge" data-en="Visiting Professor" data-fr="Professeur Invité">Visiting Professor</span>
+                                </td>
+                                <td>
+                                    <a href="https://scholar.google.com/citations?hl=en&user=uNTM1soAAAAJ" target="_blank" class="faculty-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span data-en="View Google Scholar Profile" data-fr="Voir le Profil Google Scholar">View Google Scholar Profile</span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>
+                                    <strong data-en="Dr. Asadul Islam" data-fr="Dr. Asadul Islam">Dr. Asadul Islam</strong>
+                                    <span class="badge" data-en="Visiting Professor" data-fr="Professeur Invité">Visiting Professor</span>
+                                </td>
+                                <td>
+                                    <a href="https://scholar.google.com/citations?hl=en&user=CHf4PNQAAAAJ" target="_blank" class="faculty-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span data-en="View Google Scholar Profile" data-fr="Voir le Profil Google Scholar">View Google Scholar Profile</span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>
+                                    <strong data-en="Professor Francesca Dal Mas" data-fr="Professeur Francesca Dal Mas">Professor Francesca Dal Mas</strong>
+                                    <span class="badge" data-en="Visiting Professor" data-fr="Professeur Invité">Visiting Professor</span>
+                                </td>
+                                <td>
+                                    <a href="https://scholar.google.com/citations?user=5jjn1OEAAAAJ&hl=en" target="_blank" class="faculty-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span data-en="View Google Scholar Profile" data-fr="Voir le Profil Google Scholar">View Google Scholar Profile</span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>
+                                    <strong data-en="Professor Maria Kordowicz" data-fr="Professeur Maria Kordowicz">Professor Maria Kordowicz</strong>
+                                    <span class="badge" data-en="Visiting Professor" data-fr="Professeur Invité">Visiting Professor</span>
+                                </td>
+                                <td>
+                                    <a href="https://scholar.google.com/citations?user=eX3YLEUAAAAJ&hl=en" target="_blank" class="faculty-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span data-en="View Google Scholar Profile" data-fr="Voir le Profil Google Scholar">View Google Scholar Profile</span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>
+                                    <strong data-en="Professor P. Mary Jeyanthi" data-fr="Professeur P. Mary Jeyanthi">Professor P. Mary Jeyanthi</strong>
+                                    <span class="badge" data-en="Visiting Professor" data-fr="Professeur Invité">Visiting Professor</span>
+                                </td>
+                                <td>
+                                    <a href="https://scholar.google.com/citations?user=xLi6R7wAAAAJ&hl=en" target="_blank" class="faculty-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span data-en="View Google Scholar Profile" data-fr="Voir le Profil Google Scholar">View Google Scholar Profile</span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>
+                                    <strong data-en="Associate Professor Shehnaz Tehseen" data-fr="Professeur Associé Shehnaz Tehseen">Associate Professor Shehnaz Tehseen</strong>
+                                    <span class="badge" data-en="Visiting Professor" data-fr="Professeur Invité">Visiting Professor</span>
+                                </td>
+                                <td>
+                                    <a href="https://scholar.google.com/citations?user=P58sT8oAAAAJ&hl=en" target="_blank" class="faculty-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span data-en="View Google Scholar Profile" data-fr="Voir le Profil Google Scholar">View Google Scholar Profile</span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>
+                                    <strong data-en="Dr. Chrisben Fiifi Daniels" data-fr="Dr. Chrisben Fiifi Daniels">Dr. Chrisben Fiifi Daniels</strong>
+                                    <span class="badge" data-en="Postdoctoral Fellow" data-fr="Boursier Postdoctoral">Postdoctoral Fellow</span>
+                                </td>
+                                <td>
+                                    <a href="https://scholar.google.ca/citations?user=CVq9MYIAAAAJ&hl" target="_blank" class="faculty-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        <span data-en="View Google Scholar Profile" data-fr="Voir le Profil Google Scholar">View Google Scholar Profile</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Recent Publications -->
+                <div class="recent-pubs">
+                    <div class="section-header" style="margin-bottom: 40px;">
+                        <h3 data-en="Just Published Articles & Books" data-fr="Articles et Livres Récemment Publiés">Just Published Articles & Books</h3>
+                    </div>
+                    
+                    <div class="pub-item">
+                        <div class="pub-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="pub-content">
+                            <h4 data-en="International Students and Pandemic Self-Isolation" data-fr="Étudiants Internationaux et Isolement Pandémique">International Students and Pandemic Self-Isolation</h4>
+                            <p class="pub-author" data-en="Published article by Prof. Dieu Hack-Polay" data-fr="Article publié par le Prof. Dieu Hack-Polay">Published article by Prof. Dieu Hack-Polay</p>
+                            <a href="https://rb.gy/fx7sgx" target="_blank" class="faculty-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-en="Read Article" data-fr="Lire l'Article">Read Article</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="pub-item">
+                        <div class="pub-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="pub-content">
+                            <h4 data-en="Intra-Immigrant Workplace Conflict" data-fr="Conflit en Milieu de Travail Intra-Immigrant">Intra-Immigrant Workplace Conflict</h4>
+                            <p class="pub-author" data-en="Published article by Prof. Dieu Hack-Polay" data-fr="Article publié par le Prof. Dieu Hack-Polay">Published article by Prof. Dieu Hack-Polay</p>
+                            <a href="https://rb.gy/8swuzp" target="_blank" class="faculty-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span data-en="Read Article" data-fr="Lire l'Article">Read Article</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scholarly Contributions -->
+                <div class="research-contact">
+                    <h3 data-en="Scholarly Contributions by Our Faculty" data-fr="Contributions Scientifiques de Nos Professeurs">Scholarly Contributions by Our Faculty</h3>
+                    <p class="lang-content active">
+                        Stay ahead with previews of upcoming publications from our faculty, showcasing ongoing research projects and forthcoming articles and books. For inquiries about specific publications or more information on our research initiatives, please contact us.
+                    </p>
+                    <p class="lang-content">
+                        Restez informés des publications à venir de nos professeurs, présentant les projets de recherche en cours et les articles et livres à paraître. Pour toute demande de renseignements sur des publications spécifiques ou pour obtenir plus d'informations sur nos initiatives de recherche, veuillez nous contacter.
+                    </p>
+                    
+                    <div style="margin-top: 30px;">
+                        <a href="publications.html" class="btn-primary" data-en="View All Publications" data-fr="Voir Toutes les Publications">View All Publications</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 data-en="City Institute of Higher Learning" data-fr="Institut Supérieur de la Ville">City Institute of Higher Learning</h3>
+                    <p data-en="Advanced research-focused education institute in New Brunswick, Canada." data-fr="Institut d'éducation axé sur la recherche avancée au Nouveau-Brunswick, Canada.">Advanced research-focused education institute in New Brunswick, Canada.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Programmes" data-fr="Programmes">Programmes</h3>
+                    <ul class="footer-links">
+                        <li><a href="programs.html" data-en="Academic Diplomas" data-fr="Diplômes Académiques">Academic Diplomas</a></li>
+                        <li><a href="programs.html" data-en="Executive Education" data-fr="Éducation Exécutive">Executive Education</a></li>
+                        <li><a href="programs.html" data-en="Community Programmes" data-fr="Programmes Communautaires">Community Programmes</a></li>
+                        <li><a href="programs.html" data-en="Consulting Services" data-fr="Services de Conseil">Consulting Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Quick Links" data-fr="Liens Rapides">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-en="About" data-fr="À propos">About</a></li>
+                        <li><a href="research.html" data-en="Research" data-fr="Recherche">Research</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+                        <li><a href="contact.html" data-en="Terms & Conditions" data-fr="Conditions d'Utilisation">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Contact" data-fr="Contact">Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+15063882833"><i class="fas fa-phone"></i> +1 506 388 2833</a></li>
+                        <li><a href="mailto:admin@city-ihl.ca"><i class="fas fa-envelope"></i> admin@city-ihl.ca</a></li>
+                        <li><a href="contact.html"><i class="fas fa-map-marker-alt"></i> Moncton, New Brunswick</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 City Institute of Higher Learning. <span data-en="All rights reserved." data-fr="Tous droits réservés.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle Functionality
+        const langEnBtn = document.getElementById('langEn');
+        const langFrBtn = document.getElementById('langFr');
+        const langContents = document.querySelectorAll('.lang-content');
+        const bilingualElements = document.querySelectorAll('[data-en]');
+
+        function switchLanguage(lang) {
+            // Update toggle buttons
+            langEnBtn.classList.toggle('active', lang === 'en');
+            langFrBtn.classList.toggle('active', lang === 'fr');
+            
+            // Show/hide language-specific content
+            langContents.forEach(el => {
+                el.classList.toggle('active', 
+                    (lang === 'en' && el.id.includes('En')) || 
+                    (lang === 'fr' && el.id.includes('Fr')) ||
+                    (!el.id && lang === 'en')
+                );
+            });
+            
+            // Update bilingual text
+            bilingualElements.forEach(el => {
+                if (el.tagName === 'BUTTON' || el.tagName === 'A' || el.tagName === 'SPAN' || el.tagName === 'P' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'H4' || el.tagName === 'TH' || el.tagName === 'TD' || el.tagName === 'DIV' || el.tagName === 'STRONG') {
+                    el.textContent = el.getAttribute(`data-${lang}`);
+                }
+            });
+            
+            // Save language preference
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Load saved language preference
+        const savedLang = localStorage.getItem('preferredLanguage');
+        if (savedLang) {
+            switchLanguage(savedLang);
+        }
+
+        langEnBtn.addEventListener('click', () => switchLanguage('en'));
+        langFrBtn.addEventListener('click', () => switchLanguage('fr'));
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Research Tabs Functionality
+        const researchTabs = document.querySelectorAll('.research-tab');
+        const researchSections = document.querySelectorAll('.research-section');
+
+        researchTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.getAttribute('data-tab');
+                
+                // Update active tab
+                researchTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Show corresponding section
+                researchSections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === tabId) {
+                        section.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Smooth scrolling for anchor links within this page
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                // Only handle internal page anchors, not external page links
+                if (href.startsWith('#') && href.length > 1) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Table row hover effects
+        document.querySelectorAll('.faculty-table tbody tr').forEach(row => {
+            row.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(5px)';
+            });
+            
+            row.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0)';
+            });
+        });
+    </script>
+</body>
+</html>
