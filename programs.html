@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmes | City Institute of Higher Learning | Institut Supérieur de la Ville</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+        /* CSS Variables - Same as homepage */
+    
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" id="langEn">EN</button>
+        <button class="lang-btn" id="langFr">FR</button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px;">
+                    <!-- Replace with your actual logo -->
+                    <!-- <img src="your-logo.png" alt="CityIHL Logo" style="height: 40px;"> -->
+                    <div class="logo-icon">C</div>
+                    <div class="logo-text">CityIHL</div>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" data-en="Home" data-fr="Accueil">Home</a></li>
+                <li><a href="about.html" data-en="About" data-fr="À propos">About</a></li>
+                <li><a href="programs.html" class="active" data-en="Programs" data-fr="Programmes">Programs</a></li>
+                <li><a href="research.html" data-en="Research" data-fr="Recherche">Research</a></li>
+                <li><a href="events.html" data-en="Events" data-fr="Événements">Events</a></li>
+                <li><a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+                <li><button class="apply-btn" data-en="Apply Now" data-fr="Postuler">Apply Now</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Programs Hero -->
+    <section class="programs-hero">
+        <div class="container">
+            <h1 data-en="Our Programs" data-fr="Nos Programmes">Our Programs</h1>
+            <p class="lang-content active">
+                Discover our diverse range of academic programs designed to equip you with the knowledge and skills needed for success in today's dynamic world. We offer both long-form and short-form programs across multiple disciplines.
+            </p>
+            <p class="lang-content">
+                Découvrez notre gamme diversifiée de programmes académiques conçus pour vous doter des connaissances et des compétences nécessaires à la réussite dans le monde dynamique d'aujourd'hui. Nous proposons des programmes longs et courts dans plusieurs disciplines.
+            </p>
+        </div>
+    </section>
+
+    <!-- Program Filters -->
+    <div class="container">
+        <div class="program-filters">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all" data-en="All Programs" data-fr="Tous les Programmes">All Programs</button>
+                <button class="filter-tab" data-filter="social" data-en="Social Sciences & Research" data-fr="Sciences Sociales & Recherche">Social Sciences & Research</button>
+                <button class="filter-tab" data-filter="education" data-en="Education & Communication" data-fr="Éducation & Communication">Education & Communication</button>
+                <button class="filter-tab" data-filter="business" data-en="Business School" data-fr="École de Commerce">Business School</button>
+                <button class="filter-tab" data-filter="long" data-en="Long Form Programs" data-fr="Programmes Longs">Long Form Programs</button>
+                <button class="filter-tab" data-filter="short" data-en="Short Form Programs" data-fr="Programmes Courts">Short Form Programs</button>
+            </div>
+            
+            <div class="school-filter">
+                <button class="school-btn active" data-school="all" data-en="All Schools" data-fr="Toutes les Écoles">All Schools</button>
+                <button class="school-btn" data-school="social-sciences" data-en="School of Social Sciences" data-fr="École des Sciences Sociales">School of Social Sciences</button>
+                <button class="school-btn" data-school="education" data-en="School of Education" data-fr="École d'Éducation">School of Education</button>
+                <button class="school-btn" data-school="business" data-en="City Business School" data-fr="École de Commerce City">City Business School</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Sciences School -->
+    <div class="container">
+        <section class="school-section" id="social-sciences">
+            <div class="school-header">
+                <h2 data-en="School of Social Sciences and Research" data-fr="École des Sciences Sociales et de la Recherche">School of Social Sciences and Research</h2>
+                <p class="school-subtitle" data-en="Advancing knowledge through research and practical application" data-fr="Faire progresser les connaissances par la recherche et l'application pratique">Advancing knowledge through research and practical application</p>
+            </div>
+
+            <div class="programs-grid">
+                <!-- Program 1 -->
+                <div class="program-card" data-filter="social long" data-school="social-sciences">
+                    <div class="program-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Alternative Dispute Resolution">
+                    </div>
+                    <div class="program-badge" data-en="1 Year • Diploma" data-fr="1 An • Diplôme">1 Year • Diploma</div>
+                    <div class="program-content">
+                        <div class="program-header">
+                            <h3 class="program-title" data-en="Executive Diploma in Alternative Dispute Resolution" data-fr="Diplôme Exécutif en Résolution Alternative des Conflits">Executive Diploma in Alternative Dispute Resolution</h3>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> <span data-en="1 Year" data-fr="1 An">1 Year</span></span>
+                                <span class="program-type"><i class="fas fa-graduation-cap"></i> <span data-en="Diploma" data-fr="Diplôme">Diploma</span></span>
+                            </div>
+                        </div>
+                        <div class="program-description">
+                            <p class="lang-content active">A comprehensive one-year programme designed to equip participants with in-depth knowledge, practical skills, and a strong theoretical foundation in various methods of resolving disputes outside traditional litigation.</p>
+                            <p class="lang-content">Un programme complet d'un an conçu pour doter les participants de connaissances approfondies, de compétences pratiques et d'une solide base théorique dans diverses méthodes de résolution des conflits en dehors des procédures judiciaires traditionnelles.</p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format">Format</span>
+                                <span class="detail-value" data-en="On-campus/Virtual" data-fr="Sur campus/Virtuel">On-campus/Virtual</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Language" data-fr="Langue">Language</span>
+                                <span class="detail-value" data-en="English, French" data-fr="Anglais, Français">English, French</span>
+                            </div>
+                        </div>
+                        <div class="program-actions">
+                            <a href="program-details.html?program=adr-executive" class="btn-primary" data-en="Learn More" data-fr="En Savoir Plus">Learn More</a>
+                            <a href="apply.html" class="btn-secondary" data-en="Apply Now" data-fr="Postuler">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="program-card" data-filter="social long" data-school="social-sciences">
+                    <div class="program-image">
+                        <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Higher Learning Diploma in ADR">
+                    </div>
+                    <div class="program-badge" data-en="1 Year • Advanced Diploma" data-fr="1 An • Diplôme Avancé">1 Year • Advanced Diploma</div>
+                    <div class="program-content">
+                        <div class="program-header">
+                            <h3 class="program-title" data-en="Higher Learning Diploma in Alternative Dispute Resolution" data-fr="Diplôme d'Études Supérieures en Résolution Alternative des Conflits">Higher Learning Diploma in Alternative Dispute Resolution</h3>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> <span data-en="1 Year" data-fr="1 An">1 Year</span></span>
+                                <span class="program-type"><i class="fas fa-graduation-cap"></i> <span data-en="Advanced Diploma" data-fr="Diplôme Avancé">Advanced Diploma</span></span>
+                            </div>
+                        </div>
+                        <div class="program-description">
+                            <p class="lang-content active">An advanced programme with research component for those seeking comprehensive knowledge in dispute resolution methods with a focus on mediation, arbitration, negotiation, and conciliation.</p>
+                            <p class="lang-content">Un programme avancé avec composante de recherche pour ceux qui cherchent une connaissance complète des méthodes de résolution des conflits avec un accent sur la médiation, l'arbitrage, la négociation et la conciliation.</p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format">Format</span>
+                                <span class="detail-value" data-en="On-campus/Virtual" data-fr="Sur campus/Virtuel">On-campus/Virtual</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Language" data-fr="Langue">Language</span>
+                                <span class="detail-value" data-en="English, French" data-fr="Anglais, Français">English, French</span>
+                            </div>
+                        </div>
+                        <div class="program-actions">
+                            <a href="program-details.html?program=adr-hld" class="btn-primary" data-en="Learn More" data-fr="En Savoir Plus">Learn More</a>
+                            <a href="apply.html" class="btn-secondary" data-en="Apply Now" data-fr="Postuler">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program 3 - Post Doctoral Experience -->
+                <div class="program-card" data-filter="social research" data-school="social-sciences">
+                    <div class="program-image">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Post Doctoral Experience">
+                    </div>
+                    <div class="program-badge" data-en="3-12 Months • Research" data-fr="3-12 Mois • Recherche">3-12 Months • Research</div>
+                    <div class="program-content">
+                        <div class="program-header">
+                            <h3 class="program-title" data-en="Post Doctoral Experience" data-fr="Expérience Post-Doctorale">Post Doctoral Experience</h3>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> <span data-en="3-12 Months" data-fr="3-12 Mois">3-12 Months</span></span>
+                                <span class="program-type"><i class="fas fa-flask"></i> <span data-en="Research" data-fr="Recherche">Research</span></span>
+                            </div>
+                        </div>
+                        <div class="program-description">
+                            <p class="lang-content active">Put your research into practice as a visiting scholar. Work with our research team to develop your thesis into publishable papers or pursue new research topics.</p>
+                            <p class="lang-content">Mettez votre recherche en pratique en tant que chercheur invité. Travaillez avec notre équipe de recherche pour développer votre thèse en articles publiables ou poursuivez de nouveaux sujets de recherche.</p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format">Format</span>
+                                <span class="detail-value" data-en="On-campus" data-fr="Sur campus">On-campus</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Research Focus" data-fr="Focus Recherche">Research Focus</span>
+                                <span class="detail-value" data-en="Social Sciences" data-fr="Sciences Sociales">Social Sciences</span>
+                            </div>
+                        </div>
+                        <div class="program-actions">
+                            <a href="program-details.html?program=post-doc" class="btn-primary" data-en="Learn More" data-fr="En Savoir Plus">Learn More</a>
+                            <a href="contact.html" class="btn-secondary" data-en="Inquire" data-fr="Renseignements">Inquire</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program 4 - HLD in Research Skills -->
+                <div class="program-card" data-filter="social long" data-school="social-sciences">
+                    <div class="program-image">
+                        <img src="https://images.unsplash.com/photo-1554475900-3a6c3650b7e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Research Skills">
+                    </div>
+                    <div class="program-badge" data-en="1 Year • Advanced Diploma" data-fr="1 An • Diplôme Avancé">1 Year • Advanced Diploma</div>
+                    <div class="program-content">
+                        <div class="program-header">
+                            <h3 class="program-title" data-en="Higher Learning Diploma in Research Skills" data-fr="Diplôme d'Études Supérieures en Compétences de Recherche">Higher Learning Diploma in Research Skills</h3>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> <span data-en="1 Year" data-fr="1 An">1 Year</span></span>
+                                <span class="program-type"><i class="fas fa-graduation-cap"></i> <span data-en="Advanced Diploma" data-fr="Diplôme Avancé">Advanced Diploma</span></span>
+                            </div>
+                        </div>
+                        <div class="program-description">
+                            <p class="lang-content active">For those who wish to work as social researchers and consultants. Advanced understanding of quantitative and qualitative research methodologies.</p>
+                            <p class="lang-content">Pour ceux qui souhaitent travailler comme chercheurs sociaux et consultants. Compréhension avancée des méthodologies de recherche quantitative et qualitative.</p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format">Format</span>
+                                <span class="detail-value" data-en="On-campus/Virtual" data-fr="Sur campus/Virtuel">On-campus/Virtual</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Focus" data-fr="Focus">Focus</span>
+                                <span class="detail-value" data-en="Research Methods" data-fr="Méthodes de Recherche">Research Methods</span>
+                            </div>
+                        </div>
+                        <div class="program-actions">
+                            <a href="program-details.html?program=research-skills" class="btn-primary" data-en="Learn More" data-fr="En Savoir Plus">Learn More</a>
+                            <a href="apply.html" class="btn-secondary" data-en="Apply Now" data-fr="Postuler">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education School -->
+        <section class="school-section" id="education">
+            <div class="school-header">
+                <h2 data-en="School of Education and International Communication" data-fr="École d'Éducation et de Communication Internationale">School of Education and International Communication</h2>
+                <p class="school-subtitle" data-en="Developing educators and communicators for a globalized world" data-fr="Former des éducateurs et communicateurs pour un monde globalisé">Developing educators and communicators for a globalized world</p>
+            </div>
+
+            <div class="programs-grid">
+                <!-- Program 5 - Advanced Diploma in Languages -->
+                <div class="program-card" data-filter="education long" data-school="education">
+                    <div class="program-image">
+                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Languages for International Communication">
+                    </div>
+                    <div class="program-badge" data-en="1 Year • Advanced Diploma" data-fr="1 An • Diplôme Avancé">1 Year • Advanced Diploma</div>
+                    <div class="program-content">
+                        <div class="program-header">
+                            <h3 class="program-title" data-en="Advanced Diploma in Languages for International Communication" data-fr="Diplôme Avancé en Langues pour la Communication Internationale">Advanced Diploma in Languages for International Communication</h3>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> <span data-en="1 Year" data-fr="1 An">1 Year</span></span>
+                                <span class="program-type"><i class="fas fa-graduation-cap"></i> <span data-en="Advanced Diploma" data-fr="Diplôme Avancé">Advanced Diploma</span></span>
+                            </div>
+                        </div>
+                        <div class="program-description">
+                            <p class="lang-content active">Convert your language skills into employability assets. Available in English, French, Spanish, Arabic, and Chinese Mandarin.</p>
+                            <p class="lang-content">Transformez vos compétences linguistiques en atouts pour l'emploi. Disponible en anglais, français, espagnol, arabe et chinois mandarin.</p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format">Format</span>
+                                <span class="detail-value" data-en="On-campus/Virtual" data-fr="Sur campus/Virtuel">On-campus/Virtual</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Languages" data-fr="Langues">Languages</span>
+                                <span class="detail-value" data-en="English, French, Spanish, Arabic, Chinese" data-fr="Anglais, Français, Espagnol, Arabe, Chinois">English, French, Spanish, Arabic, Chinese</span>
+                            </div>
+                        </div>
+                        <div class="program-actions">
+                            <a href="program-details.html?program=languages-diploma" class="btn-primary" data-en="Learn More" data-fr="En Savoir Plus">Learn More</a>
+                            <a href="apply.html" class="btn-secondary" data-en="Apply Now" data-fr="Postuler">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program 6 - PGCE -->
+                <div class="program-card" data-filter="education long" data-school="education">
+                    <div class="program-image">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Postgraduate Certificate in Education">
+                    </div>
+                    <div class="program-badge" data-en="1 Year • Certificate" data-fr="1 An • Certificat">1 Year • Certificate</div>
+                    <div class="program-content">
+                        <div class="program-header">
+                            <h3 class="program-title" data-en="Postgraduate Certificate in Education (PGCE)" data-fr="Certificat d'Études Supérieures en Éducation (PGCE)">Postgraduate Certificate in Education (PGCE)</h3>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> <span data-en="1 Year" data-fr="1 An">1 Year</span></span>
+                                <span class="program-type"><i class="fas fa-graduation-cap"></i> <span data-en="Certificate" data-fr="Certificat">Certificate</span></span>
+                            </div>
+                        </div>
+                        <div class="program-description">
+                            <p class="lang-content active">Prepares candidates to teach in various educational settings: secondary, postsecondary and industry with specialized pathways.</p>
+                            <p class="lang-content">Prépare les candidats à enseigner dans divers contextes éducatifs : secondaire, postsecondaire et industrie avec des parcours spécialisés.</p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format">Format</span>
+                                <span class="detail-value" data-en="On-campus/Virtual" data-fr="Sur campus/Virtuel">On-campus/Virtual</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Specializations" data-fr="Spécialisations">Specializations</span>
+                                <span class="detail-value" data-en="Multiple Pathways" data-fr="Multiples Parcours">Multiple Pathways</span>
+                            </div>
+                        </div>
+                        <div class="program-actions">
+                            <a href="program-details.html?program=pgce" class="btn-primary" data-en="Learn More" data-fr="En Savoir Plus">Learn More</a>
+                            <a href="apply.html" class="btn-secondary" data-en="Apply Now" data-fr="Postuler">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business School -->
+        <section class="school-section" id="business">
+            <div class="school-header">
+                <h2 data-en="City Business School" data-fr="École de Commerce City">City Business School</h2>
+                <p class="school-subtitle" data-en="Developing business leaders for tomorrow's challenges" data-fr="Former des leaders d'entreprise pour les défis de demain">Developing business leaders for tomorrow's challenges</p>
+            </div>
+
+            <div class="programs-grid">
+                <!-- Program 7 - Executive Diploma in Management -->
+                <div class="program-card" data-filter="business long" data-school="business">
+                    <div class="program-image">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Executive Management">
+                    </div>
+                    <div class="program-badge" data-en="1 Year • Diploma" data-fr="1 An • Diplôme">1 Year • Diploma</div>
+                    <div class="program-content">
+                        <div class="program-header">
+                            <h3 class="program-title" data-en="Executive Diploma in Management (EDM)" data-fr="Diplôme Exécutif en Management (EDM)">Executive Diploma in Management (EDM)</h3>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> <span data-en="1 Year" data-fr="1 An">1 Year</span></span>
+                                <span class="program-type"><i class="fas fa-graduation-cap"></i> <span data-en="Diploma" data-fr="Diplôme">Diploma</span></span>
+                            </div>
+                        </div>
+                        <div class="program-description">
+                            <p class="lang-content active">Develop executive expertise in modern managerial practice with specializations in Marketing, HR, Logistics, or Supply Chain Management.</p>
+                            <p class="lang-content">Développez une expertise exécutive dans la pratique managériale moderne avec des spécialisations en Marketing, RH, Logistique ou Gestion de la Chaîne d'Approvisionnement.</p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format">Format</span>
+                                <span class="detail-value" data-en="On-campus/Virtual" data-fr="Sur campus/Virtuel">On-campus/Virtual</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Specializations" data-fr="Spécialisations">Specializations</span>
+                                <span class="detail-value" data-en="Marketing, HR, Logistics, Supply Chain" data-fr="Marketing, RH, Logistique, Chaîne d'Approvisionnement">Marketing, HR, Logistics, Supply Chain</span>
+                            </div>
+                        </div>
+                        <div class="program-actions">
+                            <a href="program-details.html?program=executive-management" class="btn-primary" data-en="Learn More" data-fr="En Savoir Plus">Learn More</a>
+                            <a href="apply.html" class="btn-secondary" data-en="Apply Now" data-fr="Postuler">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Program 8 - HLD in International Management -->
+                <div class="program-card" data-filter="business long" data-school="business">
+                    <div class="program-image">
+                        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="International Management">
+                    </div>
+                    <div class="program-badge" data-en="1 Year • Advanced Diploma" data-fr="1 An • Diplôme Avancé">1 Year • Advanced Diploma</div>
+                    <div class="program-content">
+                        <div class="program-header">
+                            <h3 class="program-title" data-en="Higher Learning Diploma in International Management" data-fr="Diplôme d'Études Supérieures en Management International">Higher Learning Diploma in International Management</h3>
+                            <div class="program-meta">
+                                <span class="program-duration"><i class="far fa-clock"></i> <span data-en="1 Year" data-fr="1 An">1 Year</span></span>
+                                <span class="program-type"><i class="fas fa-graduation-cap"></i> <span data-en="Advanced Diploma" data-fr="Diplôme Avancé">Advanced Diploma</span></span>
+                            </div>
+                        </div>
+                        <div class="program-description">
+                            <p class="lang-content active">For applicants with managerial experience, focusing on global business management with significant research component.</p>
+                            <p class="lang-content">Pour les candidats ayant une expérience managériale, se concentrant sur la gestion des affaires internationales avec une composante de recherche significative.</p>
+                        </div>
+                        <div class="program-details">
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Format" data-fr="Format">Format</span>
+                                <span class="detail-value" data-en="On-campus/Virtual" data-fr="Sur campus/Virtuel">On-campus/Virtual</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label" data-en="Focus" data-fr="Focus">Focus</span>
+                                <span class="detail-value" data-en="Global Business Management" data-fr="Gestion des Affaires Internationales">Global Business Management</span>
+                            </div>
+                        </div>
+                        <div class="program-actions">
+                            <a href="program-details.html/program=executive-management.html" class="btn-primary" data-en="Learn More" data-fr="En Savoir Plus">Learn More</a>
+                            <a href="apply.html" class="btn-secondary" data-en="Apply Now" data-fr="Postuler">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="programs-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="lang-content active" data-en="Ready to Start Your Journey?" data-fr="Prêt à Commencer Votre Parcours ?">Ready to Start Your Journey?</h2>
+                <h2 class="lang-content" data-en="Ready to Start Your Journey?" data-fr="Prêt à Commencer Votre Parcours ?">Ready to Start Your Journey?</h2>
+                <p class="lang-content active">Contact our admissions team to learn more about our programs and find the perfect fit for your academic and career goals.</p>
+                <p class="lang-content">Contactez notre équipe des admissions pour en savoir plus sur nos programmes et trouver celui qui correspond parfaitement à vos objectifs académiques et professionnels.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-light" data-en="Contact Admissions" data-fr="Contacter les Admissions">Contact Admissions</a>
+                    <a href="contact.html" class="btn-secondary" data-en="Request Information" data-fr="Demander des Renseignements">Request Information</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 data-en="City Institute of Higher Learning" data-fr="Institut Supérieur de la Ville">City Institute of Higher Learning</h3>
+                    <p data-en="Advanced research-focused education institute in New Brunswick, Canada." data-fr="Institut d'éducation axé sur la recherche avancée au Nouveau-Brunswick, Canada.">Advanced research-focused education institute in New Brunswick, Canada.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Programmes" data-fr="Programmes">Programmes</h3>
+                    <ul class="footer-links">
+                        <li><a href="programs.html#social-sciences" data-en="Social Sciences" data-fr="Sciences Sociales">Social Sciences</a></li>
+                        <li><a href="programs.html#education" data-en="Education" data-fr="Éducation">Education</a></li>
+                        <li><a href="programs.html#business" data-en="Business School" data-fr="École de Commerce">Business School</a></li>
+                        <li><a href="programs.html" data-en="All Programmes" data-fr="Tous les Programmes">All Programmes</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Quick Links" data-fr="Liens Rapides">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-en="Home" data-fr="Accueil">Home</a></li>
+                        <li><a href="about.html" data-en="About" data-fr="À propos">About</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+                        <li><a href="apply.html" data-en="Apply Now" data-fr="Postuler">Apply Now</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Contact" data-fr="Contact">Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+15063882833"><i class="fas fa-phone"></i> +1 506 388 2833</a></li>
+                        <li><a href="mailto:admin@city-ihl.ca"><i class="fas fa-envelope"></i> admin@city-ihl.ca</a></li>
+                        <li><a href="contact.html"><i class="fas fa-map-marker-alt"></i> Moncton, New Brunswick</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 City Institute of Higher Learning. <span data-en="All rights reserved." data-fr="Tous droits réservés.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle Functionality
+        const langEnBtn = document.getElementById('langEn');
+        const langFrBtn = document.getElementById('langFr');
+        const langContents = document.querySelectorAll('.lang-content');
+        const bilingualElements = document.querySelectorAll('[data-en]');
+
+        function switchLanguage(lang) {
+            // Update toggle buttons
+            langEnBtn.classList.toggle('active', lang === 'en');
+            langFrBtn.classList.toggle('active', lang === 'fr');
+            
+            // Show/hide language-specific content
+            langContents.forEach(el => {
+                el.classList.toggle('active', 
+                    (lang === 'en' && el.id.includes('En')) || 
+                    (lang === 'fr' && el.id.includes('Fr')) ||
+                    (!el.id && lang === 'en')
+                );
+            });
+            
+            // Update bilingual text
+            bilingualElements.forEach(el => {
+                if (el.tagName === 'BUTTON' || el.tagName === 'A' || el.tagName === 'SPAN' || el.tagName === 'P' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'DIV') {
+                    el.textContent = el.getAttribute(`data-${lang}`);
+                }
+            });
+            
+            // Save language preference
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Load saved language preference
+        const savedLang = localStorage.getItem('preferredLanguage');
+        if (savedLang) {
+            switchLanguage(savedLang);
+        }
+
+        langEnBtn.addEventListener('click', () => switchLanguage('en'));
+        langFrBtn.addEventListener('click', () => switchLanguage('fr'));
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Filter Functionality
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const schoolButtons = document.querySelectorAll('.school-btn');
+        const programCards = document.querySelectorAll('.program-card');
+
+        let activeFilter = 'all';
+        let activeSchool = 'all';
+
+        function filterPrograms() {
+            programCards.forEach(card => {
+                const cardFilter = card.getAttribute('data-filter');
+                const cardSchool = card.getAttribute('data-school');
+                
+                const filterMatch = activeFilter === 'all' || cardFilter.includes(activeFilter);
+                const schoolMatch = activeSchool === 'all' || cardSchool === activeSchool;
+                
+                if (filterMatch && schoolMatch) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                filterTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                activeFilter = tab.getAttribute('data-filter');
+                filterPrograms();
+            });
+        });
+
+        schoolButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                schoolButtons.forEach(b => b.classList.remove('active'));
+                button.classList.add('active');
+                activeSchool = button.getAttribute('data-school');
+                filterPrograms();
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+
+        // Smooth scrolling for anchor links within this page
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                // Only handle internal page anchors, not external page links
+                if (href.startsWith('#') && href.length > 1) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

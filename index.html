@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Institute of Higher Learning | Institut Supérieur de la Ville</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" id="langEn">EN</button>
+        <button class="lang-btn" id="langFr">FR</button>
+    </div>
+
+    <!-- Top Image Collage -->
+    
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px;">
+                    <div class="logo-icon">C</div>
+                    <div class="logo-text">CityIHL</div>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active" data-en="Home" data-fr="Accueil">Home</a></li>
+                <li><a href="about.html" data-en="About" data-fr="À propos">About</a></li>
+                <li><a href="programs.html" data-en="Programs" data-fr="Programmes">Programs</a></li>
+                <li><a href="research.html" data-en="Research" data-fr="Recherche">Research</a></li>
+                <li><a href="events.html" data-en="Events" data-fr="Événements">Events</a></li>
+                <li><a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+                <li><button class="apply-btn" data-en="Apply Now" data-fr="Postuler">Apply Now</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Welcome Content (Moved from Hero) -->
+    <section class="welcome-section">
+        <div class="container">
+            <div class="welcome-content">
+                <div class="welcome-badge" data-en="Atlantic Canada's Bilingual Institute" data-fr="Institut Bilingue du Canada Atlantique">Atlantic Canada's Bilingual Institute</div>
+                
+                <h1 class="welcome-title" data-en="Welcome to City Institute of Higher Learning" data-fr="Bienvenue à l'Institut Supérieur de la Ville">Welcome to City Institute of Higher Learning</h1>
+                
+                <p class="welcome-text lang-content active" id="welcomeTextEn">
+                    Where education meets innovation and diversity. Located in the heart of Moncton, C-IHL offers a variety of programmes tailored to foster global leaders equipped with the knowledge and skills necessary for success. Join us and become part of a community that values academic integrity and inclusivity.
+                </p>
+                
+                <p class="welcome-text lang-content" id="welcomeTextFr">
+                    Où l'éducation rencontre l'innovation et la diversité. Situé au cœur de Moncton, C-IHL offre une variété de programmes conçus pour former des leaders mondiaux dotés des connaissances et des compétences nécessaires à la réussite. Rejoignez-nous et faites partie d'une communauté qui valorise l'intégrité académique et l'inclusivité.
+                </p>
+                
+                <div class="welcome-btns">
+                    <button class="btn-primary" data-en="Explore Programs" data-fr="Explorer les Programmes">Explore Programs</button>
+                    <button class="btn-secondary" data-en="Visit Campus" data-fr="Visiter le Campus">Visit Campus</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label" data-en="Career Placement Rate" data-fr="Taux de Placement">Career Placement Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">20:1</div>
+                    <div class="stat-label" data-en="Student–Teacher Ratio" data-fr="Ratio Étudiant-Enseignant">Student–Teacher Ratio</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label" data-en="Programmes Offered" data-fr="Programmes Offerts">Programmes Offered</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2K</div>
+                    <div class="stat-label" data-en="Future Students" data-fr="Futurs Étudiants">Future Students</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="highlights-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Who We Are" data-fr="Qui Nous Sommes">Who We Are</h2>
+                <p class="lang-content active" data-en="Our commitment to excellence in bilingual education" data-fr="Notre engagement envers l'excellence en éducation bilingue">Our commitment to excellence in bilingual education</p>
+            </div>
+            
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 data-en="Research-Based Learning" data-fr="Apprentissage Basé sur la Recherche">Research-Based Learning</h3>
+                    <p class="lang-content active">We are a research-based learning institution committed to innovation.</p>
+                    <p class="lang-content">Nous sommes un établissement d'apprentissage basé sur la recherche engagé dans l'innovation.</p>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-globe-americas"></i></div>
+                    <h3 data-en="Global Team" data-fr="Équipe Mondiale">Global Team</h3>
+                    <p class="lang-content active">We are powered by a diverse global team of experts and educators.</p>
+                    <p class="lang-content">Nous sommes soutenus par une équipe mondiale diversifiée d'experts et d'éducateurs.</p>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-handshake"></i></div>
+                    <h3 data-en="Service Excellence" data-fr="Excellence du Service">Service Excellence</h3>
+                    <p class="lang-content active">We are here to serve you with dedication and personalized attention.</p>
+                    <p class="lang-content">Nous sommes ici pour vous servir avec dévouement et attention personnalisée.</p>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon"><i class="fas fa-award"></i></div>
+                    <h3 data-en="Quality First" data-fr="Qualité d'Abord">Quality First</h3>
+                    <p class="lang-content active">We are committed to the highest standards of educational quality.</p>
+                    <p class="lang-content">Nous nous engageons à respecter les normes de qualité éducative les plus élevées.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Programmes We Offer" data-fr="Programmes que Nous Offrons">Programmes We Offer</h2>
+                <p class="lang-content active">All our programs are offered in English and/or French</p>
+                <p class="lang-content">Tous nos programmes sont offerts en anglais et/ou français</p>
+            </div>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3 data-en="Academic Diplomas" data-fr="Diplômes Académiques">Academic Diplomas</h3>
+                    </div>
+                    <div class="program-body">
+                        <p class="lang-content active">Comprehensive higher learning diplomas for professional career success and academic advancement.</p>
+                        <p class="lang-content">Diplômes d'études supérieures complets pour la réussite professionnelle et l'avancement académique.</p>
+                    </div>
+                    <div class="program-footer">
+                        <a href="programs.html#diplomas" class="btn-secondary" style="width:100%; text-decoration: none; display: block; text-align: center;" data-en="View Programmes" data-fr="Voir les Programmes">View Programmes</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3 data-en="Executive Education" data-fr="Éducation Exécutive">Executive Education</h3>
+                    </div>
+                    <div class="program-body">
+                        <p class="lang-content active">Advanced leadership and managerial training for experienced professionals and executives.</p>
+                        <p class="lang-content">Formation avancée en leadership et gestion pour les professionnels et cadres expérimentés.</p>
+                    </div>
+                    <div class="program-footer">
+                        <a href="programs.html#executive" class="btn-secondary" style="width:100%; text-decoration: none; display: block; text-align: center;" data-en="View Programmes" data-fr="Voir les Programmes">View Programmes</a>
+                    </div>
+                </div>
+                
+                <div class="program-card">
+                    <div class="program-header">
+                        <h3 data-en="Community Programmes" data-fr="Programmes Communautaires">Community Programmes</h3>
+                    </div>
+                    <div class="program-body">
+                        <p class="lang-content active">Engage in cultural storytelling, language immersion, and community development initiatives.</p>
+                        <p class="lang-content">Participez à des initiatives de narration culturelle, d'immersion linguistique et de développement communautaire.</p>
+                    </div>
+                    <div class="program-footer">
+                        <a href="programs.html#community" class="btn-secondary" style="width:100%; text-decoration: none; display: block; text-align: center;" data-en="View Programmes" data-fr="Voir les Programmes">View Programmes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section with Featured Research Series -->
+    <section class="events-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 data-en="Upcoming Events" data-fr="Événements à Venir">Upcoming Events</h2>
+                <p class="lang-content active">Join our vibrant campus community</p>
+                <p class="lang-content">Rejoignez notre communauté universitaire dynamique</p>
+            </div>
+            
+            <!-- Featured Event: CITY Research Series -->
+            <div class="featured-event">
+                <div class="featured-event-content">
+                    <div class="featured-event-badge">
+                        <span data-en="Featured Event" data-fr="Événement en Vedette">Featured Event</span>
+                    </div>
+                    
+                    <h2 class="featured-event-title" data-en="CITY RESEARCH SERIES" data-fr="SÉRIE DE RECHERCHE CITY">CITY RESEARCH SERIES</h2>
+                    
+                    <div class="featured-event-subtitle">
+                        <span class="lang-content active" data-en="With Prof Maria Kordowicz" data-fr="Avec la Prof Maria Kordowicz">With Prof Maria Kordowicz</span>
+                        <span class="lang-content" data-en="Professor of Organisational Psychology, Regent's University London" data-fr="Professeure de Psychologie Organisationnelle, Université Regent's de Londres">Professor of Organisational Psychology, Regent's University London</span>
+                    </div>
+                    
+                    <div class="featured-event-details">
+                        <div class="detail-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <div>
+                                <strong data-en="Date & Time" data-fr="Date & Heure">Date & Time</strong>
+                                <p data-en="Tuesday, 2nd December 2025<br>3pm UK Time / 11am Moncton, Canada" data-fr="Mardi 2 décembre 2025<br>15h Heure UK / 11h Moncton, Canada">Tuesday, 2nd December 2025<br>3pm UK Time / 11am Moncton, Canada</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-video"></i>
+                            <div>
+                                <strong data-en="Format" data-fr="Format">Format</strong>
+                                <p data-en="Online Session via LinkedIn" data-fr="Session en ligne via LinkedIn">Online Session via LinkedIn</p>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <i class="fas fa-link"></i>
+                            <div>
+                                <strong data-en="Join Link" data-fr="Lien de participation">Join Link</strong>
+                                <p><a href="https://lnkd.in/eT8BuxrG" target="_blank" class="event-link">https://lnkd.in/eT8BuxrG</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-event-description">
+                        <h3 data-en="Main Topic: 'Redundant? The Case of English Universities'" data-fr="Sujet principal : 'Redundant? Le cas des universités anglaises'">Main Topic: "Redundant? The Case of English Universities"</h3>
+                        <p class="lang-content active">
+                            We are thrilled to present another powerful session in the CITY Research Series, featuring one of the UK's leading voices in organisational psychology, Prof Maria Kordowicz, Professor of Organisational Psychology and Director of Psychology & Research at Regent's University London.
+                        </p>
+                        <p class="lang-content">
+                            Nous sommes ravis de présenter une autre session importante de la Série de Recherche CITY, avec l'une des voix les plus influentes du Royaume-Uni en psychologie organisationnelle, la Prof Maria Kordowicz, Professeure de Psychologie Organisationnelle et Directrice de la Psychologie et de la Recherche à l'Université Regent's de Londres.
+                        </p>
+                        
+                        <div class="theme-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <div>
+                                <strong data-en="Theme" data-fr="Thème">Theme</strong>
+                                <p data-en="Exploring the Impact on Academic Identities and Wellbeing" data-fr="Explorer l'impact sur les identités académiques et le bien-être">Exploring the Impact on Academic Identities and Wellbeing</p>
+                            </div>
+                        </div>
+                        
+                        <p class="lang-content active">
+                            Professor Kordowicz will examine the challenges facing universities today, using English institutions as a compelling case study, from shifting organisational demands to their effects on academic identity, purpose, and wellbeing. This session offers vital insight and reflection for academics, students, policymakers, and anyone invested in higher education's future.
+                        </p>
+                        <p class="lang-content">
+                            La Professeure Kordowicz examinera les défis auxquels sont confrontées les universités aujourd'hui, en utilisant les institutions anglaises comme étude de cas convaincante, des demandes organisationnelles changeantes à leurs effets sur l'identité académique, le but et le bien-être. Cette session offre des perspectives et réflexions vitales pour les universitaires, étudiants, décideurs politiques et toute personne investie dans l'avenir de l'enseignement supérieur.
+                        </p>
+                    </div>
+                    
+                    <div class="featured-event-actions">
+                        <a href="https://lnkd.in/eT8BuxrG" target="_blank" class="btn-primary" data-en="Join Online Session" data-fr="Rejoindre la session en ligne">Join Online Session</a>
+                        <a href="events.html" class="btn-secondary" data-en="View All Events" data-fr="Voir tous les événements">View All Events</a>
+                    </div>
+                </div>
+                
+                <div class="featured-event-image">
+                    <!-- Replace with your c-img1 -->
+                    <img src="c-img1.jpg" alt="CITY Research Series with Prof Maria Kordowicz" class="event-main-image">
+                    <div class="image-caption">
+                        <span data-en="Prof Maria Kordowicz" data-fr="Prof Maria Kordowicz">Prof Maria Kordowicz</span>
+                        <small data-en="Professor of Organisational Psychology" data-fr="Professeure de Psychologie Organisationnelle">Professor of Organisational Psychology</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other Upcoming Events Grid -->
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Open House Event">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <i class="far fa-calendar"></i>
+                            <span data-en="March 15, 2024" data-fr="15 Mars 2024">March 15, 2024</span>
+                        </div>
+                        <h3 data-en="Open House 2024" data-fr="Portes Ouvertes 2024">Open House 2024</h3>
+                        <p class="lang-content active">Explore our campus, meet faculty, and discover your future at C-IHL.</p>
+                        <p class="lang-content">Explorez notre campus, rencontrez les professeurs et découvrez votre avenir à C-IHL.</p>
+                        <a href="events.html#open-house" class="btn-secondary" style="margin-top:15px; display: inline-block; text-decoration: none;" data-en="Learn More" data-fr="En Savoir Plus">Learn More</a>
+                    </div>
+                </div>
+                
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Career Fair">
+                    </div>
+                    <div class="event-content">
+                        <div class="event-date">
+                            <i class="far fa-calendar"></i>
+                            <span data-en="May 22, 2024" data-fr="22 Mai 2024">May 22, 2024</span>
+                        </div>
+                        <h3 data-en="Career Fair" data-fr="Salon de l'Emploi">Career Fair</h3>
+                        <p class="lang-content active">Connect with top employers and explore career opportunities.</p>
+                        <p class="lang-content">Connectez-vous avec les meilleurs employeurs et explorez des opportunités de carrière.</p>
+                        <a href="events.html#career-fair" class="btn-secondary" style="margin-top:15px; display: inline-block; text-decoration: none;" data-en="Register Now" data-fr="S'Inscrire">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 data-en="City Institute of Higher Learning" data-fr="Institut Supérieur de la Ville">City Institute of Higher Learning</h3>
+                    <p data-en="Advanced research-focused education institute in New Brunswick, Canada." data-fr="Institut d'éducation axé sur la recherche avancée au Nouveau-Brunswick, Canada.">Advanced research-focused education institute in New Brunswick, Canada.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Quick Links" data-fr="Liens Rapides">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-en="Home" data-fr="Accueil">Home</a></li>
+                        <li><a href="about.html" data-en="About" data-fr="À propos">About</a></li>
+                        <li><a href="programs.html" data-en="Programs" data-fr="Programmes">Programs</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Contact" data-fr="Contact">Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+15063882833"><i class="fas fa-phone"></i> +1 506 388 2833</a></li>
+                        <li><a href="mailto:admin@city-ihl.ca"><i class="fas fa-envelope"></i> admin@city-ihl.ca</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Moncton, New Brunswick</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 City Institute of Higher Learning. <span data-en="All rights reserved." data-fr="Tous droits réservés.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle Functionality
+        const langEnBtn = document.getElementById('langEn');
+        const langFrBtn = document.getElementById('langFr');
+        const langContents = document.querySelectorAll('.lang-content');
+        const bilingualElements = document.querySelectorAll('[data-en]');
+
+        function switchLanguage(lang) {
+            // Update toggle buttons
+            langEnBtn.classList.toggle('active', lang === 'en');
+            langFrBtn.classList.toggle('active', lang === 'fr');
+            
+            // Show/hide language-specific content
+            langContents.forEach(el => {
+                el.classList.toggle('active', 
+                    (lang === 'en' && el.id.includes('En')) || 
+                    (lang === 'fr' && el.id.includes('Fr')) ||
+                    (!el.id && lang === 'en')
+                );
+            });
+            
+            // Update bilingual text
+            bilingualElements.forEach(el => {
+                if (el.tagName === 'BUTTON' || el.tagName === 'A' || el.tagName === 'SPAN' || el.tagName === 'P' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3') {
+                    el.textContent = el.getAttribute(`data-${lang}`);
+                }
+            });
+            
+            // Save language preference to localStorage
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Check for saved language preference
+        const savedLang = localStorage.getItem('preferredLanguage');
+        if (savedLang) {
+            switchLanguage(savedLang);
+        }
+
+        langEnBtn.addEventListener('click', () => switchLanguage('en'));
+        langFrBtn.addEventListener('click', () => switchLanguage('fr'));
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+    </script>
+</body>
+</html>

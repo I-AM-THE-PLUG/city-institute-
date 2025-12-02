@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | City Institute of Higher Learning | Institut Supérieur de la Ville</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables - Same as other pages */
+        :root {
+            --bg-start: #F9EDE4;
+            --bg-mid: #E7B7A5;
+            --bg-end: #C25A47;
+            --accent: #D67A63;
+            --nav-height: 72px;
+            --card-radius: 14px;
+            --glass: rgba(255,255,255,0.2);
+            --max-width: 1200px;
+            --text-dark: #0A1A2A;
+            --green-dark: #0F3D2E;
+            --section-spacing: 80px;
+            --white: #ffffff;
+            --light-gray: #f8f9fa;
+            --shadow: 0 10px 30px rgba(166, 92, 74, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: var(--bg-start);
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 92%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Language Toggle */
+        .lang-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1001;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 5px;
+            display: flex;
+            gap: 5px;
+        }
+
+        .lang-btn {
+            padding: 8px 20px;
+            background: transparent;
+            border: none;
+            border-radius: 50px;
+            color: var(--text-dark);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .lang-btn.active {
+            background: var(--white);
+            color: var(--accent);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            box-shadow: 0 4px 20px rgba(166, 92, 74, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: var(--nav-height);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent), var(--bg-end));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.4rem;
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 800;
+            background: linear-gradient(to right, var(--green-dark), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 1.05rem;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent), var(--bg-end));
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .apply-btn {
+            background: linear-gradient(to right, var(--accent), var(--bg-end));
+            color: white;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(214, 122, 99, 0.3);
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(214, 122, 99, 0.4);
+        }
+
+        /* Contact Hero */
+        .contact-hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-mid) 100%);
+            text-align: center;
+            border-radius: 0 0 40px 40px;
+            margin-bottom: 60px;
+        }
+
+        .contact-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, var(--green-dark), var(--bg-end));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .contact-hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            color: var(--text-dark);
+            opacity: 0.9;
+        }
+
+        /* Contact Layout */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 80px;
+        }
+
+        /* Contact Information */
+        .contact-info-section {
+            margin-bottom: 80px;
+        }
+
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .info-card {
+            background: var(--white);
+            border-radius: var(--card-radius);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(166, 92, 74, 0.15);
+        }
+
+        .info-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, rgba(214, 122, 99, 0.1), rgba(194, 90, 71, 0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--accent);
+            font-size: 1.8rem;
+        }
+
+        .info-content h3 {
+            font-size: 1.4rem;
+            color: var(--green-dark);
+            margin-bottom: 15px;
+        }
+
+        .info-content p {
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .info-link {
+            color: var(--bg-end);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .info-link:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        /* Map Section */
+        .map-section {
+            margin-bottom: 80px;
+        }
+
+        .map-container {
+            background: var(--white);
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            height: 400px;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--bg-mid), var(--bg-end));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .map-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        /* Contact Form */
+        .contact-form-section {
+            margin-bottom: 80px;
+        }
+
+        .form-container {
+            background: var(--white);
+            border-radius: var(--card-radius);
+            padding: 50px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .form-header h2 {
+            font-size: 2rem;
+            color: var(--green-dark);
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--green-dark);
+        }
+
+        .form-input,
+        .form-textarea,
+        .form-select {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid rgba(214, 122, 99, 0.2);
+            border-radius: var(--card-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+            background: var(--white);
+        }
+
+        .form-input:focus,
+        .form-textarea:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(214, 122, 99, 0.1);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-select {
+            cursor: pointer;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23D67A63' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            background-size: 16px;
+        }
+
+        .form-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            cursor: pointer;
+        }
+
+        .form-checkbox input {
+            margin-top: 5px;
+            accent-color: var(--accent);
+        }
+
+        .checkbox-label {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        .checkbox-link {
+            color: var(--bg-end);
+            text-decoration: none;
+        }
+
+        .checkbox-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Department Contacts */
+        .departments-section {
+            margin-bottom: 80px;
+        }
+
+        .departments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .department-card {
+            background: var(--white);
+            border-radius: var(--card-radius);
+            padding: 35px 30px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--accent);
+        }
+
+        .department-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .department-icon {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .department-content h3 {
+            font-size: 1.3rem;
+            color: var(--green-dark);
+            margin-bottom: 15px;
+        }
+
+        .department-contact {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(214, 122, 99, 0.1);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .contact-item i {
+            color: var(--accent);
+            width: 20px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin-bottom: 80px;
+        }
+
+        .faq-container {
+            background: var(--white);
+            border-radius: var(--card-radius);
+            padding: 50px;
+            box-shadow: var(--shadow);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(214, 122, 99, 0.1);
+            padding: 25px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--accent);
+        }
+
+        .faq-question h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--green-dark);
+            margin: 0;
+        }
+
+        .faq-icon {
+            color: var(--accent);
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            margin-top: 20px;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background: linear-gradient(to right, var(--accent), var(--bg-end));
+            color: white;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(214, 122, 99, 0.3);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(214, 122, 99, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--green-dark);
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            border: 2px solid var(--accent);
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(214, 122, 99, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Response Time */
+        .response-time {
+            background: linear-gradient(135deg, var(--green-dark), var(--text-dark));
+            color: white;
+            padding: 60px;
+            border-radius: var(--card-radius);
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .response-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .response-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .response-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--bg-mid);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--green-dark);
+            color: white;
+            padding-top: 70px;
+            margin-top: 80px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: var(--bg-mid);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 25px 0;
+            text-align: center;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+
+        /* Language Content */
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 1100px) {
+            .contact-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .nav-links {
+                gap: 20px;
+            }
+            
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .info-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .departments-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: var(--nav-height);
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                flex-direction: column;
+                padding: 30px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+                transform: translateY(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .form-container {
+                padding: 40px 30px;
+            }
+            
+            .faq-container {
+                padding: 40px 30px;
+            }
+            
+            .response-time {
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-hero {
+                padding: 120px 0 60px;
+            }
+            
+            .contact-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .form-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .response-content h2 {
+                font-size: 2rem;
+            }
+            
+            .response-stats {
+                flex-direction: column;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .lang-toggle {
+                position: relative;
+                top: 0;
+                right: 0;
+                margin-bottom: 20px;
+                justify-content: center;
+            }
+            
+            .info-card,
+            .department-card {
+                padding: 30px 20px;
+            }
+            
+            .map-placeholder {
+                padding: 30px 20px;
+            }
+            
+            .btn-primary,
+            .btn-secondary {
+                padding: 14px 28px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" id="langEn">EN</button>
+        <button class="lang-btn" id="langFr">FR</button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">C</div>
+                <div class="logo-text">CityIHL</div>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" data-en="Home" data-fr="Accueil">Home</a></li>
+                <li><a href="about.html" data-en="About" data-fr="À propos">About</a></li>
+                <li><a href="programs.html" data-en="Programs" data-fr="Programmes">Programs</a></li>
+                <li><a href="research.html" data-en="Research" data-fr="Recherche">Research</a></li>
+                <li><a href="events.html" data-en="Events" data-fr="Événements">Events</a></li>
+                <li><a href="contact.html" class="active" data-en="Contact" data-fr="Contact">Contact</a></li>
+                <li><button class="apply-btn" data-en="Apply Now" data-fr="Postuler">Apply Now</button></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 data-en="Contact Us" data-fr="Contactez-Nous">Contact Us</h1>
+            <p class="lang-content active">
+                Get in touch with City Institute of Higher Learning. We're here to answer your questions, provide information about our programs, and help you with your academic journey.
+            </p>
+            <p class="lang-content">
+                Contactez l'Institut Supérieur de la Ville. Nous sommes là pour répondre à vos questions, fournir des informations sur nos programmes et vous aider dans votre parcours académique.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <div class="container">
+        <section class="contact-info-section">
+            <div class="info-cards">
+                <!-- General Contact -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3 data-en="General Inquiries" data-fr="Renseignements Généraux">General Inquiries</h3>
+                        <p data-en="For general questions and information" data-fr="Pour des questions et informations générales">For general questions and information</p>
+                        <p><strong>Email:</strong> <a href="mailto:admin@city-ihl.ca" class="info-link">admin@city-ihl.ca</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:+15063882833" class="info-link">+1 506 388 2833</a></p>
+                    </div>
+                </div>
+
+                <!-- Admissions -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3 data-en="Admissions Office" data-fr="Bureau des Admissions">Admissions Office</h3>
+                        <p data-en="For program applications and admissions" data-fr="Pour les candidatures et admissions aux programmes">For program applications and admissions</p>
+                        <p><strong>Email:</strong> <a href="mailto:admissions@city-ihl.ca" class="info-link">admissions@city-ihl.ca</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:+15063882833" class="info-link">+1 506 388 2833 ext. 101</a></p>
+                    </div>
+                </div>
+
+                <!-- Student Services -->
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3 data-en="Student Services" data-fr="Services aux Étudiants">Student Services</h3>
+                        <p data-en="Support for current students" data-fr="Soutien pour les étudiants actuels">Support for current students</p>
+                        <p><strong>Email:</strong> <a href="mailto:studentservices@city-ihl.ca" class="info-link">studentservices@city-ihl.ca</a></p>
+                        <p><strong>Phone:</strong> <a href="tel:+15063882833" class="info-link">+1 506 388 2833 ext. 102</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section">
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3 data-en="Our Location" data-fr="Notre Emplacement">Our Location</h3>
+                        <p data-en="Moncton, New Brunswick, Canada" data-fr="Moncton, Nouveau-Brunswick, Canada">Moncton, New Brunswick, Canada</p>
+                        <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;" data-en="Interactive map would display here" data-fr="Carte interactive s'afficherait ici">Interactive map would display here</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form & Information Layout -->
+        <div class="contact-layout">
+            <!-- Contact Form -->
+            <section class="contact-form-section">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2 data-en="Send Us a Message" data-fr="Envoyez-Nous un Message">Send Us a Message</h2>
+                        <p class="lang-content active">We'll respond to your inquiry within 24-48 hours.</p>
+                        <p class="lang-content">Nous répondrons à votre demande dans les 24 à 48 heures.</p>
+                    </div>
+
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" data-en="First Name" data-fr="Prénom">First Name *</label>
+                                <input type="text" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" data-en="Last Name" data-fr="Nom">Last Name *</label>
+                                <input type="text" class="form-input" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" data-en="Email Address" data-fr="Adresse Courriel">Email Address *</label>
+                            <input type="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" data-en="Phone Number" data-fr="Numéro de Téléphone">Phone Number</label>
+                            <input type="tel" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" data-en="Department/Inquiry Type" data-fr="Département/Type de Demande">Department/Inquiry Type *</label>
+                            <select class="form-select" required>
+                                <option value="" data-en="Select a department" data-fr="Sélectionnez un département">Select a department</option>
+                                <option value="admissions" data-en="Admissions" data-fr="Admissions">Admissions</option>
+                                <option value="academic" data-en="Academic Programs" data-fr="Programmes Académiques">Academic Programs</option>
+                                <option value="research" data-en="Research" data-fr="Recherche">Research</option>
+                                <option value="events" data-en="Events" data-fr="Événements">Events</option>
+                                <option value="career" data-en="Career Services" data-fr="Services de Carrière">Career Services</option>
+                                <option value="general" data-en="General Inquiry" data-fr="Demande Générale">General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" data-en="Subject" data-fr="Sujet">Subject *</label>
+                            <input type="text" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" data-en="Message" data-fr="Message">Message *</label>
+                            <textarea class="form-textarea" rows="6" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-checkbox">
+                                <input type="checkbox" required>
+                                <span class="checkbox-label lang-content active">
+                                    I agree to receive communications from C-IHL regarding my inquiry. 
+                                    <a href="#" class="checkbox-link" data-en="Privacy Policy" data-fr="Politique de Confidentialité">Privacy Policy</a>
+                                </span>
+                                <span class="checkbox-label lang-content">
+                                    J'accepte de recevoir des communications de C-IHL concernant ma demande.
+                                    <a href="#" class="checkbox-link" data-en="Privacy Policy" data-fr="Politique de Confidentialité">Politique de Confidentialité</a>
+                                </span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn-primary" style="width: 100%;" data-en="Send Message" data-fr="Envoyer le Message">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Contact Information Sidebar -->
+            <div>
+                <!-- Department Contacts -->
+                <section class="departments-section">
+                    <h2 style="font-size: 1.8rem; color: var(--green-dark); margin-bottom: 30px;" data-en="Department Contacts" data-fr="Contacts par Département">Department Contacts</h2>
+                    
+                    <div class="departments-grid">
+                        <!-- Academic Affairs -->
+                        <div class="department-card">
+                            <div class="department-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <div class="department-content">
+                                <h3 data-en="Academic Affairs" data-fr="Affaires Académiques">Academic Affairs</h3>
+                                <p class="lang-content active">For academic program inquiries, course information, and faculty matters.</p>
+                                <p class="lang-content">Pour les demandes concernant les programmes académiques, les informations sur les cours et les questions relatives au corps professoral.</p>
+                                <div class="department-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>academics@city-ihl.ca</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+1 506 388 2833 ext. 201</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Research Office -->
+                        <div class="department-card">
+                            <div class="department-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="department-content">
+                                <h3 data-en="Research Office" data-fr="Bureau de la Recherche">Research Office</h3>
+                                <p class="lang-content active">For research collaborations, grants, and research program inquiries.</p>
+                                <p class="lang-content">Pour les collaborations de recherche, les subventions et les demandes concernant les programmes de recherche.</p>
+                                <div class="department-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>research@city-ihl.ca</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+1 506 388 2833 ext. 301</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- International Office -->
+                        <div class="department-card">
+                            <div class="department-icon">
+                                <i class="fas fa-globe-americas"></i>
+                            </div>
+                            <div class="department-content">
+                                <h3 data-en="International Office" data-fr="Bureau International">International Office</h3>
+                                <p class="lang-content active">For international student support and global partnership inquiries.</p>
+                                <p class="lang-content">Pour le soutien aux étudiants internationaux et les demandes de partenariats mondiaux.</p>
+                                <div class="department-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>international@city-ihl.ca</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+1 506 388 2833 ext. 401</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Finance Office -->
+                        <div class="department-card">
+                            <div class="department-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <div class="department-content">
+                                <h3 data-en="Finance Office" data-fr="Bureau des Finances">Finance Office</h3>
+                                <p class="lang-content active">For tuition, fees, and financial matters.</p>
+                                <p class="lang-content">Pour les frais de scolarité, les frais et les questions financières.</p>
+                                <div class="department-contact">
+                                    <div class="contact-item">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>finance@city-ihl.ca</span>
+                                    </div>
+                                    <div class="contact-item">
+                                        <i class="fas fa-phone"></i>
+                                        <span>+1 506 388 2833 ext. 501</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Office Hours -->
+                <div style="background: var(--white); border-radius: var(--card-radius); padding: 30px; box-shadow: var(--shadow); margin-bottom: 40px;">
+                    <h3 style="color: var(--green-dark); margin-bottom: 20px;" data-en="Office Hours" data-fr="Heures de Bureau">Office Hours</h3>
+                    <div style="display: grid; gap: 15px;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span data-en="Monday - Friday" data-fr="Lundi - Vendredi">Monday - Friday</span>
+                            <span style="font-weight: 600;">9:00 AM - 5:00 PM</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span data-en="Saturday" data-fr="Samedi">Saturday</span>
+                            <span style="font-weight: 600;">10:00 AM - 2:00 PM</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span data-en="Sunday" data-fr="Dimanche">Sunday</span>
+                            <span style="font-weight: 600;" data-en="Closed" data-fr="Fermé">Closed</span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-dark); opacity: 0.8;" class="lang-content active">
+                        * Emergency contact available outside office hours
+                    </p>
+                    <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-dark); opacity: 0.8;" class="lang-content">
+                        * Contact d'urgence disponible en dehors des heures de bureau
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="section-header" style="text-align: center; margin-bottom: 50px;">
+                <h2 data-en="Frequently Asked Questions" data-fr="Foire Aux Questions">Frequently Asked Questions</h2>
+                <p class="lang-content active">Find quick answers to common questions</p>
+                <p class="lang-content">Trouvez des réponses rapides aux questions courantes</p>
+            </div>
+
+            <div class="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 data-en="How do I apply to C-IHL?" data-fr="Comment postuler à C-IHL ?">How do I apply to C-IHL?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="lang-content active">
+                            You can apply through our online application portal. Visit the "Programs" page, select your desired program, and click "Apply Now." You'll need to submit your academic transcripts, a statement of purpose, and references. For detailed instructions, contact our admissions office.
+                        </p>
+                        <p class="lang-content">
+                            Vous pouvez postuler via notre portail de candidature en ligne. Visitez la page "Programmes", sélectionnez le programme souhaité et cliquez sur "Postuler". Vous devrez soumettre vos relevés de notes académiques, une lettre de motivation et des références. Pour des instructions détaillées, contactez notre bureau des admissions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 data-en="What are the tuition fees?" data-fr="Quels sont les frais de scolarité ?">What are the tuition fees?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="lang-content active">
+                            Tuition fees vary by program and duration. For specific fee information, please contact our finance office or visit the individual program pages where fee ranges are provided. We also offer financial aid and payment plans for eligible students.
+                        </p>
+                        <p class="lang-content">
+                            Les frais de scolarité varient selon le programme et la durée. Pour des informations spécifiques sur les frais, veuillez contacter notre bureau des finances ou visiter les pages individuelles des programmes où des fourchettes de frais sont fournies. Nous offrons également une aide financière et des plans de paiement pour les étudiants éligibles.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 data-en="Do you offer online programs?" data-fr="Offrez-vous des programmes en ligne ?">Do you offer online programs?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="lang-content active">
+                            Yes, many of our programs are offered in both on-campus and virtual formats. We provide flexible learning options to accommodate students from different locations. Check individual program pages for format availability.
+                        </p>
+                        <p class="lang-content">
+                            Oui, beaucoup de nos programmes sont offerts en format sur campus et virtuel. Nous proposons des options d'apprentissage flexibles pour accommoder les étudiants de différentes localisations. Consultez les pages individuelles des programmes pour la disponibilité des formats.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 data-en="How can I schedule a campus visit?" data-fr="Comment puis-je planifier une visite du campus ?">How can I schedule a campus visit?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="lang-content active">
+                            You can schedule a campus tour by contacting our admissions office. We also host regular Open House events where you can tour the campus, meet faculty, and learn more about our programs. Check our Events page for upcoming Open House dates.
+                        </p>
+                        <p class="lang-content">
+                            Vous pouvez planifier une visite du campus en contactant notre bureau des admissions. Nous organisons également régulièrement des événements Portes Ouvertes où vous pouvez visiter le campus, rencontrer les professeurs et en savoir plus sur nos programmes. Consultez notre page Événements pour les prochaines dates des Portes Ouvertes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3 data-en="What support services do you offer?" data-fr="Quels services de soutien offrez-vous ?">What support services do you offer?</h3>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="lang-content active">
+                            We offer comprehensive student support including academic advising, career services, counseling, language support, and disability services. Our international office provides additional support for international students including visa assistance and cultural integration.
+                        </p>
+                        <p class="lang-content">
+                            Nous offrons un soutien étudiant complet comprenant le conseil académique, les services de carrière, le counseling, le soutien linguistique et les services pour les personnes handicapées. Notre bureau international fournit un soutien supplémentaire aux étudiants internationaux, y compris l'assistance aux visas et l'intégration culturelle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Response Time Section -->
+        <section class="response-time">
+            <div class="response-content">
+                <h2 data-en="Quick Response Time" data-fr="Temps de Réponse Rapide">Quick Response Time</h2>
+                <p class="lang-content active">
+                    We value your inquiries and strive to respond promptly. Here's what you can expect when you contact us.
+                </p>
+                <p class="lang-content">
+                    Nous accordons de l'importance à vos demandes et nous efforçons de répondre rapidement. Voici ce à quoi vous pouvez vous attendre lorsque vous nous contactez.
+                </p>
+                
+                <div class="response-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">24-48h</div>
+                        <div class="stat-label" data-en="Email Response" data-fr="Réponse par Courriel">Email Response</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1-3h</div>
+                        <div class="stat-label" data-en="Phone Response" data-fr="Réponse Téléphonique">Phone Response</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label" data-en="Satisfaction Rate" data-fr="Taux de Satisfaction">Satisfaction Rate</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 data-en="City Institute of Higher Learning" data-fr="Institut Supérieur de la Ville">City Institute of Higher Learning</h3>
+                    <p data-en="Advanced research-focused education institute in New Brunswick, Canada." data-fr="Institut d'éducation axé sur la recherche avancée au Nouveau-Brunswick, Canada.">Advanced research-focused education institute in New Brunswick, Canada.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Programmes" data-fr="Programmes">Programmes</h3>
+                    <ul class="footer-links">
+                        <li><a href="programs.html" data-en="Academic Diplomas" data-fr="Diplômes Académiques">Academic Diplomas</a></li>
+                        <li><a href="programs.html" data-en="Executive Education" data-fr="Éducation Exécutive">Executive Education</a></li>
+                        <li><a href="programs.html" data-en="Community Programmes" data-fr="Programmes Communautaires">Community Programmes</a></li>
+                        <li><a href="programs.html" data-en="Consulting Services" data-fr="Services de Conseil">Consulting Services</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Quick Links" data-fr="Liens Rapides">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-en="About" data-fr="À propos">About</a></li>
+                        <li><a href="research.html" data-en="Research" data-fr="Recherche">Research</a></li>
+                        <li><a href="events.html" data-en="Events" data-fr="Événements">Events</a></li>
+                        <li><a href="contact.html" data-en="Contact" data-fr="Contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 data-en="Contact" data-fr="Contact">Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+15063882833"><i class="fas fa-phone"></i> +1 506 388 2833</a></li>
+                        <li><a href="mailto:admin@city-ihl.ca"><i class="fas fa-envelope"></i> admin@city-ihl.ca</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Moncton, New Brunswick</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 City Institute of Higher Learning. <span data-en="All rights reserved." data-fr="Tous droits réservés.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language Toggle Functionality
+        const langEnBtn = document.getElementById('langEn');
+        const langFrBtn = document.getElementById('langFr');
+        const langContents = document.querySelectorAll('.lang-content');
+        const bilingualElements = document.querySelectorAll('[data-en]');
+
+        function switchLanguage(lang) {
+            // Update toggle buttons
+            langEnBtn.classList.toggle('active', lang === 'en');
+            langFrBtn.classList.toggle('active', lang === 'fr');
+            
+            // Show/hide language-specific content
+            langContents.forEach(el => {
+                el.classList.toggle('active', 
+                    (lang === 'en' && el.id.includes('En')) || 
+                    (lang === 'fr' && el.id.includes('Fr')) ||
+                    (!el.id && lang === 'en')
+                );
+            });
+            
+            // Update bilingual text
+            bilingualElements.forEach(el => {
+                if (el.tagName === 'BUTTON' || el.tagName === 'A' || el.tagName === 'SPAN' || el.tagName === 'P' || el.tagName === 'H1' || el.tagName === 'H2' || el.tagName === 'H3' || el.tagName === 'OPTION' || el.tagName === 'LABEL' || el.tagName === 'DIV' || el.tagName === 'STRONG') {
+                    const text = el.getAttribute(`data-${lang}`);
+                    if (text) el.textContent = text;
+                }
+                if (el.tagName === 'INPUT' && el.placeholder) {
+                    const placeholder = el.getAttribute(`data-${lang}`);
+                    if (placeholder) el.placeholder = placeholder;
+                }
+            });
+        }
+
+        langEnBtn.addEventListener('click', () => switchLanguage('en'));
+        langFrBtn.addEventListener('click', () => switchLanguage('fr'));
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('active')) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const requiredFields = contactForm.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = 'var(--bg-end)';
+                } else {
+                    field.style.borderColor = 'rgba(214, 122, 99, 0.2)';
+                }
+            });
+            
+            if (isValid) {
+                // In a real implementation, this would submit to a server
+                // For now, show a success message
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                
+                submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                submitBtn.style.background = 'linear-gradient(to right, var(--green-dark), var(--accent))';
+                submitBtn.disabled = true;
+                
+                // Reset form
+                setTimeout(() => {
+                    contactForm.reset();
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = 'linear-gradient(to right, var(--accent), var(--bg-end))';
+                    submitBtn.disabled = false;
+                    
+                    // Show success notification
+                    alert('Thank you! Your message has been sent successfully. We will respond within 24-48 hours.');
+                }, 2000);
+            } else {
+                alert('Please fill in all required fields marked with *.');
+            }
+        });
+
+        // Department Card Hover Effects
+        document.querySelectorAll('.department-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Info Card Hover Effects
+        document.querySelectorAll('.info-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId !== '#') {
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Form input styling on focus
+        document.querySelectorAll('.form-input, .form-textarea, .form-select').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'translateY(-2px)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
